@@ -4,12 +4,12 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 
 const navLinks = [
-    {id: 1, link: "Home" , href: "/"},
-    {id: 2, link: "About" , href: "#about"},
-    {id: 3, link: "Service" , href: "#service"},
-    {id: 4, link: "Portfolio" , href: "#portfolio"},
-    {id: 5, link: "Contact" , href: "#contact"}
-]
+  { id: 1, link: "Home", href: "/" },
+  { id: 2, link: "About", href: "#about" },
+  { id: 3, link: "Service", href: "#service" },
+  { id: 4, link: "Portfolio", href: "#portfolio" },
+  { id: 5, link: "Contact", href: "#contact" },
+];
 
 const Navbar = () => {
   const [toggle, setToggle] = useState();
@@ -34,7 +34,9 @@ const Navbar = () => {
           </div>
           <div className="hidden lg:flex gap-5 text-xl font-semibold">
             {navLinks.map((link) => (
-                <Link key={link.id} href={link.href}>{link.link}</Link>
+              <Link key={link.id} href={link.href}>
+                {link.link}
+              </Link>
             ))}
           </div>
           <div
