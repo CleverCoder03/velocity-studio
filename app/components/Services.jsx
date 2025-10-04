@@ -17,10 +17,10 @@ const Services = () => {
               </div>
             </div>
             <div className="mt-5">
-              <h1 className="font-mona font-semibold text-3xl">
+              <div className="font-mona font-semibold text-3xl flex">
                 <span>{service.id}.</span>{" "}
-                <span className="ml-5 tracking-tight">{service.title}</span>
-              </h1>
+                <h1 className={`ml-5 tracking-tight ${service.title === "Creative Development" ? "w-20" : "w-full"}`}>{service.title}</h1>
+              </div>
               <div className="mt-5">
                 <p className="font-mona text-gray-500 text-lg">
                   {service.desc}
