@@ -5,7 +5,7 @@ import { services } from "../constants";
 
 const Services = () => {
   return (
-    <section id="services" className="relative mt-20">
+    <section id="services" className="relative mt-30">
       <Heading name={"services"} number={"03"} title={"Expertise"} />
 
       <div className="mt-24 border-t-[1px] border-gray-300 ">

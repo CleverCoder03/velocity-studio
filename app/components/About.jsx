@@ -4,7 +4,7 @@ import Heading from "./Heading";
 
 const About = () => {
   return (
-    <section id="about" className="relative">
+    <section id="about" className="relative mt-30">
       <div>
         <Heading name={"about us"} number={"01"} />
 
