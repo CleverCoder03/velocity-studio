@@ -1,5 +1,6 @@
 import { Inter, Mona_Sans } from "next/font/google";
 import "./globals.css";
+import LenisScrollProvider from "./components/LenisScrollProvider";
 
 const inter = Inter({
   variable: "--font-inter-sans",
@@ -22,7 +23,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${inter.variable} ${monaSans.variable} antialiased`}
       >
-        {children}
+        <LenisScrollProvider>{children}</LenisScrollProvider>
       </body>
     </html>
   );

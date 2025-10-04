@@ -24,3 +24,53 @@ export const services = [
         img: "/motion.svg"
     },
 ]
+
+export const socialLinks = [
+    {
+        id: 1,
+        title: "YouTube",
+        img: "/youtube.svg",
+        href: ""
+    },
+    {
+        id: 2,
+        title: "Dribble",
+        img: "/dribble.svg",
+        href: ""
+    },
+    {
+        id: 3,
+        title: "Instagram",
+        img: "/instagram.svg",
+        href: ""
+    },
+    {
+        id: 4,
+        title: "Linkedin",
+        img: "/linkedin.svg",
+        href: ""
+    }
+]
+
+export const footerLinks = [
+    {
+        id: 1,
+        name: "Home",
+        href: "#"
+    },
+    {
+        id: 2,
+        name: "About Us",
+        href: "#about"
+    },
+    {
+        id: 3,
+        name: "Services",
+        href: "#services"
+    },
+    {
+        id: 4,
+        name: "Portfolio",
+        href: "#portfolio"
+    },
+]

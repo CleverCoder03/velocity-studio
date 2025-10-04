@@ -5,6 +5,11 @@
   --font-mona: var(--font-mona-Sans);
 }
 
+:root{
+  scroll-behavior: smooth;
+  scroll-margin-top: "2rem";
+}
+
 body{
   overflow-x: hidden;
 }
