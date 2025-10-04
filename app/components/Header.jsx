@@ -21,7 +21,7 @@ const Header = () => {
   return (
     <>
       <header className="relative h-dvh w-dvw">
-        <div className="absolute top-0 left-0 h-full w-full z-10 mix-blend-darken">
+        <div className="absolute top-0 left-0 h-full w-full z-10 mix-blend-darken overflow-hidden">
           <Image
             src="/hero-bg-hd.png"
             alt="Header Background"

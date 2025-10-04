@@ -1,15 +1,11 @@
 import Image from "next/image";
 import React from "react";
+import Heading from "./Heading";
 
 const Mission = () => {
   return (
     <section id="mission" className="relative">
-      <div className="border-t mt-10">
-        <div className="flex justify-between items-center font-inter mt-4">
-          <div className="uppercase">(our mission)</div>
-          <div className="rounded-4xl border px-4">02</div>
-        </div>
-      </div>
+      <Heading name={"mission"} number={"02"} />
 
       <div className="relative bg-white h-full w-full">
         <div className="relative h-full w-full flex justify-center my-20">

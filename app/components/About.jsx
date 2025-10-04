@@ -1,21 +1,12 @@
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
+import Heading from "./Heading";
 
 const About = () => {
   return (
     <section id="about" className="relative">
-      <div className="border-t mt-10">
-        <div className="flex justify-between items-center font-inter mt-4">
-          <div className="uppercase">(the story)</div>
-          <div className="rounded-4xl border px-4">01</div>
-        </div>
-
-        <Marquee
-          speed={90}
-          className="text-5xl mt-5 uppercase font-inter font-extrabold"
-        >
-          <div>About Us</div>
-        </Marquee>
+      <div>
+        <Heading name={"about us"} number={"01"} />
 
         <div className="mt-12">
           <p className="indent-17 text-[5vw] leading-[1.3] font-inter font-medium text-justify">
