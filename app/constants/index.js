@@ -74,3 +74,27 @@ export const footerLinks = [
         href: "#portfolio"
     },
 ]
+
+export const projects = [
+    {
+        id: "1",
+        img: "/project-1.jpg",
+        year: "2025",
+        tags: ["UI/UX design", "Development"],
+        title: "A gaming Arena"
+    },
+    {
+        id: "2",
+        img: "/project-2.jpg",
+        year: "2025",
+        tags: ["UI/UX design", "development"],
+        title: "Cocktail Collision"
+    },
+    {
+        id: "3",
+        img: "/project-3.jpg",
+        year: "2025",
+        tags: ["development"],
+        title: "Developer till the dawn"
+    },
+]

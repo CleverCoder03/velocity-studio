@@ -1,6 +1,7 @@
 import React from "react";
 import Heading from "./Heading";
 import Image from "next/image";
+import Projects from "./Projects";
 
 const Portfolio = () => {
   return (
@@ -31,10 +32,8 @@ const Portfolio = () => {
         </div>
       </div>
 
-      <div className="py-10 border-b-[1px] border-gray-300">
-        <div>
-
-        </div>
+      <div className="">
+        <Projects />
       </div>
     </section>
   );
