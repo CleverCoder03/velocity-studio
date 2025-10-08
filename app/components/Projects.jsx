@@ -1,11 +1,13 @@
 import Image from "next/image";
 import { projects } from "../constants";
+import Link from "next/link";
 
 const Projects = () => {
   return (
     <>
       {projects.map((project) => (
-        <div className="py-16 bg-white border-b-[1px] border-gray-300 lg:flex lg:flex-row-reverse lg:justify-between lg:items-start"  key={project.id}>
+        <Link href={project.href} key={project.id}>
+          <div className="py-16 bg-white border-b-[1px] border-gray-300 lg:flex lg:flex-row-reverse lg:justify-between lg:items-start" >
           <div className="lg:relative lg:h-[50vw]">
             <div className="relative lg:absolute lg:right-0 w-full lg:w-[48vw] h-[32rem] lg:h-[50vw] lg:overflow-hidden">
               <Image
@@ -36,6 +38,7 @@ const Projects = () => {
             </div>
           </div>
         </div>
+        </Link>
       ))}
     </>
   );

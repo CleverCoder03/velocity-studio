@@ -81,20 +81,23 @@ export const projects = [
         img: "/project-1.jpg",
         year: "2025",
         tags: ["UI/UX design", "Development"],
-        title: "A gaming Arena"
+        title: "A gaming Arena",
+        href: "https://zodius.vercel.app"
     },
     {
         id: "2",
         img: "/project-2.jpg",
         year: "2025",
         tags: ["UI/UX design", "development"],
-        title: "Cocktail Collision"
+        title: "Cocktail Collision",
+        href: "https://vector-mojo.vercel.app"
     },
     {
         id: "3",
         img: "/project-3.jpg",
         year: "2025",
         tags: ["development"],
-        title: "Developer till the dawn"
+        title: "Developer till the dawn",
+        href: "https://vishalmishra.vercel.app"
     },
 ]

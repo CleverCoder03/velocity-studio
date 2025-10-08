@@ -36,7 +36,7 @@ const Portfolio = () => {
         </div>
       </div>
 
-      <div className="">
+      <div className="lg:mb-40 xl:mb-50">
         <Projects />
       </div>
     </section>
