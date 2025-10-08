@@ -5,9 +5,9 @@ const Projects = () => {
   return (
     <>
       {projects.map((project) => (
-        <div className="relative py-16 border-b-[1px] border-gray-300" key={project.id}>
-          <div>
-            <div className="relative w-full h-[32rem]">
+        <div className="py-16 bg-white border-b-[1px] border-gray-300 lg:flex lg:flex-row-reverse lg:justify-between lg:items-start"  key={project.id}>
+          <div className="lg:relative lg:h-[50vw]">
+            <div className="relative lg:absolute lg:right-0 w-full lg:w-[48vw] h-[32rem] lg:h-[50vw] lg:overflow-hidden">
               <Image
                 src={project.img}
                 alt={project.title}
@@ -17,9 +17,9 @@ const Projects = () => {
             </div>
           </div>
 
-          <div className="mt-10">
+          <div className="mt-10 lg:sticky lg:top-20 text-white z-12 mix-blend-difference">
             <div>
-              <h1 className="text-4xl font-mona font-extrabold">&copy;{project.year}</h1>
+              <h1 className="text-4xl lg:text-5xl lg:font-semibold font-mona font-extrabold">&copy;{project.year}</h1>
               <div className="mt-2 flex gap-3">
                 {project.tags.map((tag) => (
                     <span key={tag} className="border uppercase font-medium rounded-2xl px-3 py-1">
@@ -30,7 +30,7 @@ const Projects = () => {
             </div>
 
             <div className="mt-2">
-              <h1 className="text-5xl uppercase font-mona font-extrabold">
+              <h1 className="text-5xl lg:text-[7.5vw] lg:w-[70vw] uppercase font-mona font-extrabold">
                 {project.title}
               </h1>
             </div>
