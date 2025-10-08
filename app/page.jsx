@@ -12,10 +12,18 @@ export default function Home() {
       <div className="relative lg:flex lg:justify-center">
         <div className="px-6 lg:px-20 w-full xl:px-35">
         <About />
-        <Mission />
-        <Services />
-        <Portfolio />
       </div>
+      </div>
+      <div className="px-6">
+        <Mission />
+      </div>
+        <div className="relative lg:flex lg:justify-center">
+        <div className="px-6 lg:px-20 w-full xl:px-35">
+        <Services />
+      </div>
+      </div>
+        <div className="px-6">
+        <Portfolio />
       </div>
       <Footer />
     </main>

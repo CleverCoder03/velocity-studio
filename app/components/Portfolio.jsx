@@ -5,7 +5,7 @@ import Projects from "./Projects";
 
 const Portfolio = () => {
   return (
-    <section id="portfolio" className="relative mt-30">
+    <section id="portfolio" className="relative mt-30 lg:mt-40 xl:mt-50">
       <Heading name={"Portfolio"} number={"04"} />
 
       <div className="pb-20 border-b-[1px] border-gray-300">

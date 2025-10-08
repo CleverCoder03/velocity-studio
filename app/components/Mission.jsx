@@ -21,7 +21,7 @@ const Mission = () => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-5 font-inter text-lg">
+        <div className="flex flex-col gap-5 font-inter text-lg lg:px-20 w-full xl:px-35">
           <p className="indent-15">
             We thrive on turning imaginative concepts into user-friendly digital
             solutions. Whether it's a sleek website, a user-friendly app, or a
