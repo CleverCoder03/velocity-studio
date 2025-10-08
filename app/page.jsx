@@ -9,11 +9,13 @@ export default function Home() {
   return (
     <main>
       <Header />
-      <div className="px-6">
+      <div className="relative lg:flex lg:justify-center">
+        <div className="px-6 lg:px-20 w-full xl:px-35">
         <About />
         <Mission />
         <Services />
         <Portfolio />
+      </div>
       </div>
       <Footer />
     </main>
