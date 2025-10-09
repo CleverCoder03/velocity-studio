@@ -1,6 +1,10 @@
+"use client"
+import {motion} from "motion/react"
 import Image from "next/image";
 import { projects } from "../constants";
 import Link from "next/link";
+import CharReveal from "./CharReveal";
+import Copy from "./Copy";
 
 const Projects = () => {
   return (
@@ -8,7 +12,12 @@ const Projects = () => {
       {projects.map((project) => (
         <Link href={project.href} key={project.id}>
           <div className="py-16 bg-white border-b-[1px] border-gray-300 lg:flex lg:flex-row-reverse lg:justify-between lg:items-start" >
-          <div className="lg:relative lg:h-[50vw]">
+          <motion.div initial={{ opacity: 0 }}
+              // The state to animate to WHEN the element is in the viewport
+              whileInView={{ opacity: 1 }}
+              // This ensures the animation only happens once
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: [0.83, 0, 0.17, 1], delay: 0.4 }} className="lg:relative lg:h-[50vw]">
             <div className="relative lg:absolute lg:right-0 w-full lg:w-[48vw] h-[32rem] lg:h-[50vw] lg:overflow-hidden">
               <Image
                 src={project.img}
@@ -17,7 +26,7 @@ const Projects = () => {
                 fill
               />
             </div>
-          </div>
+          </motion.div>
 
           <div className="mt-10 lg:sticky lg:top-20 text-white z-12 mix-blend-difference">
             <div>
@@ -32,9 +41,11 @@ const Projects = () => {
             </div>
 
             <div className="mt-2">
-              <h1 className="text-5xl lg:text-[7.5vw] lg:w-[70vw] uppercase font-mona font-extrabold">
+              <Copy delay={0.2}>
+                <h1 className="text-5xl lg:text-[7.5vw] lg:w-[70vw] uppercase font-mona font-extrabold">
                 {project.title}
               </h1>
+              </Copy>
             </div>
           </div>
         </div>

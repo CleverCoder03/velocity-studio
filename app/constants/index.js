@@ -89,7 +89,7 @@ export const projects = [
         img: "/project-2.jpg",
         year: "2025",
         tags: ["UI/UX design", "development"],
-        title: "Cocktail Collision",
+        title: "Cocktail Exploration",
         href: "https://vector-mojo.vercel.app"
     },
     {

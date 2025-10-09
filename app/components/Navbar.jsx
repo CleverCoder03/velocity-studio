@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
+import { useMediaQuery } from "react-responsive";
 
 const navLinks = [
   { id: 1, link: "Home", href: "/" },
@@ -11,8 +12,27 @@ const navLinks = [
   { id: 5, link: "Contact", href: "#contact" },
 ];
 
+const navbarBgVariants = {
+  // State for desktop or initial mobile state
+  transparent: {
+    backgroundColor: "rgba(0, 0, 0, 0)", // Animate from fully transparent
+  },
+  // State for mobile after delay
+  solid: {
+    backgroundColor: "rgba(0, 0, 0, 1)", // Animate to solid black
+  },
+};
+
 const Navbar = () => {
   const [toggle, setToggle] = useState();
+  const isMobile = useMediaQuery({ maxWidth: 1024 });
+
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    // This effect runs only on the client side, after the component has mounted
+    setIsClient(true);
+  }, []);
 
   useEffect(() => {
     if (toggle) {
@@ -27,8 +47,19 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="absolute top-0 left-0 w-full z-20 text-white bg-black lg:bg-transparent lg:mix-blend-difference">
-        <nav className="flex w-full justify-between items-center px-6 py-4 lg:px-10">
+      <motion.div
+        variants={navbarBgVariants}
+        initial="transparent"
+        animate={isClient && isMobile ? "solid" : "transparent"}
+        transition={{ ease: "easeOut", duration: 0.5, delay: 1 }}
+        className="absolute top-0 left-0 w-full z-20 text-white lg:bg-transparent lg:mix-blend-difference"
+      >
+        <motion.nav
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ ease: "easeOut", duration: 0.5, delay: 1 }}
+          className="flex w-full justify-between items-center px-6 py-4 lg:px-10"
+        >
           <div className="font-inter font-semibold text-2xl lg:text-3xl">
             <Link href="#">Velocity</Link>
           </div>
@@ -45,8 +76,8 @@ const Navbar = () => {
           >
             {toggle ? "Close" : "Menu"}
           </div>
-        </nav>
-      </div>
+        </motion.nav>
+      </motion.div>
 
       <AnimatePresence>
         {toggle && (

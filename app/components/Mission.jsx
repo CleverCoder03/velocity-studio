@@ -1,6 +1,9 @@
+"use client"
 import Image from "next/image";
 import React from "react";
 import Heading from "./Heading";
+import CharReveal from "./CharReveal";
+import {motion} from "motion/react"
 
 const Mission = () => {
   return (
@@ -10,14 +13,27 @@ const Mission = () => {
       </div>
       <div className="relative bg-white h-full w-full">
         <div className="relative h-full w-full flex justify-center my-20">
-          <div className="relative w-[50vw] h-[87vw] lg:w-[45vh] lg:h-[60vw] xl:h-[100vh]">
-            <Image src="/mission.jpg" alt="Our Mission" fill />
-          </div>
+          <motion.div initial={{ opacity: 0 }}
+              // The state to animate to WHEN the element is in the viewport
+              whileInView={{ opacity: 1 }}
+              // This ensures the animation only happens once
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: [0.83, 0, 0.17, 1], delay: 0.4 }}>
+            <div className="relative w-[50vw] h-[87vw] lg:w-[45vh] lg:h-[60vw] xl:h-[100vh]">
+              <Image src="/mission.jpg" alt="Our Mission" fill />
+            </div>
+          </motion.div>
 
           <div className="absolute z-10 w-full top-0 mt-[15vh] lg:mt-[20vh] xl:mt-[22vh] text-white mix-blend-difference text-[12.8vw] lg:text-[10vw] leading-[1] text-center uppercase font-mona font-extrabold ">
-            <h1 className="text-start">Redesign</h1>
-            <h1 className="text-end">Rebuild</h1>
-            <h1 className="text-left indent-[22vw]">Rethink</h1>
+            <CharReveal>
+              <h1 className="text-start">Redesign</h1>
+            </CharReveal>
+            <CharReveal delay={0.4}>
+              <h1 className="text-end">Rebuild</h1>
+            </CharReveal>
+            <CharReveal delay={0.8}>
+              <h1 className="text-left ml-[22vw]">Rethink</h1>
+            </CharReveal>
           </div>
         </div>
 

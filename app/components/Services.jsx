@@ -1,3 +1,5 @@
+"use client"
+import {motion} from "motion/react"
 import React from "react";
 import Heading from "./Heading";
 import Image from "next/image";
@@ -10,7 +12,7 @@ const Services = () => {
 
       <div className="mt-24 border-t-[1px] border-gray-300 ">
         {services.map((service) => (
-          <div key={service.id} className="border-b-[1px] border-gray-300  py-15 lg:flex lg:flex-row-reverse lg:justify-between lg:gap-[10vw]">
+          <motion.div initial={{y: 200, opacity: 0}} whileInView={{y: 0, opacity: 1}} viewport={{ once: true }} transition={{ duration: 0.8, ease: [0.83, 0, 0.17, 1] }} key={service.id} className="border-b-[1px] border-gray-300  py-15 lg:flex lg:flex-row-reverse lg:justify-between lg:gap-[10vw]">
             <div className="border-[1px] border-gray-300 rounded-full w-fit h-fit py-8 px-3">
               <div className="relative w-15 h-15">
                 <Image src={service.img} alt={service.title} fill />
@@ -27,7 +29,7 @@ const Services = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

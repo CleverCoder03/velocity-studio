@@ -1,7 +1,10 @@
+"use client"
+import {motion} from "motion/react"
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { footerLinks, socialLinks } from "../constants";
+import Copy from "./Copy";
 
 const Footer = () => {
   return (
@@ -56,13 +59,20 @@ const Footer = () => {
       </div>
 
       <div className="py-12 border-b border-white text-white">
+          <Copy>
         <div className="text-[13vw] lg:text-[10vw] leading-[0.95] lg:text-justify mt-5 w-full uppercase font-mona font-extrabold">
-          <h1 className="flex">
+            <h1 className="flex">
             Velocity <span className="text-xl font-medium lg:text-4xl lg:mt-3">&copy;2025</span>
           </h1>
           <h1>Studio</h1>
         </div>
-        <div className="mt-25">
+          </Copy>
+        <motion.div initial={{ opacity: 0 }}
+              // The state to animate to WHEN the element is in the viewport
+              whileInView={{ opacity: 1 }}
+              // This ensures the animation only happens once
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: [0.83, 0, 0.17, 1] }} className="mt-25">
           <h1 className="text-xl font-mona font-semibold w-full lg:text-right">
             Developed By{" "}
             <Link
@@ -72,7 +82,7 @@ const Footer = () => {
               Vishal Mishra
             </Link>
           </h1>
-        </div>
+        </motion.div>
       </div>
     </footer>
   );
