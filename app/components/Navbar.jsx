@@ -108,7 +108,7 @@ const Navbar = () => {
                 </Link>
               </div>
               <div className="text-white mt-20 flex justify-between text-lg">
-                <p>Based in Pune, India</p>
+                <p>Based in Mumbai, India</p>
                 <p>+91 72490 84224</p>
               </div>
             </div>
